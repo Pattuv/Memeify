@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'Segoe';
+    src: url(segoe-ui-this/segoeuithis.ttf);
+}
+
+
+
 body{
     background-color: rgb(46, 46, 46);
     color: white;
     text-align: center;
-    font-family: 'Segoe UI';
+    font-family: 'Segoe';
 }
 
 #title{
