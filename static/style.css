@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
+#title{
+    font-size: 25px;
+    font-weight: 650;
+    margin-bottom: 0px;
+}
+
+#true{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+
+#imgdiv{
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    font-family: 'Segoe UI';
+    width: 300px;
+    border-radius: 100px;
+    border: none;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+
+
+#memeImage{
+    max-width: 100%; 
+    height: auto;
+}
