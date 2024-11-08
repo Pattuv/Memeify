@@ -1,0 +1,17 @@
+{
+    "name": "ProgMemes",
+    "short_name": "ProgMemes",
+    "description": "An app to view coding mems for free :)",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "/static/progmemes logo.png",
+        "sizes": "250x250",
+        "type": "image/png"
+      }
+    ]
+  }
+  
