@@ -37,7 +37,7 @@
 
     <title>ProgMemes</title>
   </head>
-  <body data-bs-theme="dark">
+  <body data-bs-theme="dark" onclick="get_random_meme()">
     <p class="fs-3 bold">
       Programming Memes <br />
       Generator
@@ -78,9 +78,9 @@
       });
     </script>
 
-    <p>Tap to view another meme.</p>
+    <p>Tap anywhere to view another meme.</p>
 
-    <div id="imgdiv" onclick="get_random_meme()">
+    <div id="imgdiv">
       <img id="memeImage" src="" alt="" />
     </div>
 
