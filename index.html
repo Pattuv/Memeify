@@ -60,22 +60,31 @@
 
     <div class="settings">
       <button class="close-settings btn btn-danger">&times;</button>
-      <h2>Settings</h2>
+      <h2 style="margin-bottom: 20px">Settings</h2>
       <div
         class="d-flex justify-content-center align-items-center"
         style="margin-bottom: 10px; margin-top: 10px"
       >
-        <div class="form-check form-switch d-flex align-items-center">
-          <input
-            class="form-check-input me-2"
-            type="checkbox"
-            id="darkModeSwitch"
-          />
-          <label class="form-check-label mb-0" for="darkModeSwitch"
-            >Dark Mode</label
-          >
+        <div class="d-flex justify-content-center align-items-center">
+          <i
+            class="bi bi-moon-stars-fill"
+            style="font-size: 1rem; margin-right: 10px"
+          ></i>
+          <div class="form-check form-switch mx-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="darkModeSwitch"
+            />
+          </div>
+          <i class="bi bi-brightness-high-fill" style="font-size: 1.2rem"></i>
         </div>
       </div>
+
+      <div style="margin-top: 40px" class="fs-4">
+        Prog<label id="green">Memes</label>
+      </div>
+      <div>Created by Pratyush Verma</div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
