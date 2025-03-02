@@ -37,51 +37,44 @@
 
     <title>ProgMemes</title>
   </head>
-  <body data-bs-theme="dark" onclick="get_random_meme()">
-    <p class="fs-3 bold">
-      Programming Memes <br />
-      Generator
-    </p>
-
-    <p>Created by Pratyush Verma</p>
-
-    <div
-      class="d-flex justify-content-center align-items-center"
-      style="margin-bottom: 10px; margin-top: 10px"
-    >
-      <div class="form-check form-switch d-flex align-items-center">
-        <input
-          class="form-check-input me-2"
-          type="checkbox"
-          id="darkModeSwitch"
-        />
-        <label class="form-check-label mb-0" for="darkModeSwitch"
-          >Dark Mode</label
-        >
+  <body data-bs-theme="dark">
+    <nav class="border-bottom">
+      <div class="container">
+        <div class="row w-100">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>Prog<label id="green">Memes</label></div>
+            <button class="btn p-0" id="open-settings">
+              <i class="bi bi-gear-fill"></i>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <script>
-      const darkModeSwitch = document.getElementById("darkModeSwitch");
-      const body = document.body;
-
-      // Check local storage to set the initial theme
-      const savedTheme = localStorage.getItem("theme") || "dark";
-      body.setAttribute("data-bs-theme", savedTheme);
-      darkModeSwitch.checked = savedTheme === "dark";
-
-      // Add event listener to toggle the theme
-      darkModeSwitch.addEventListener("change", () => {
-        const theme = darkModeSwitch.checked ? "dark" : "light";
-        body.setAttribute("data-bs-theme", theme);
-        localStorage.setItem("theme", theme);
-      });
-    </script>
-
-    <p>Tap anywhere to view another meme.</p>
+    <p style="margin-top: 25px">Tap anywhere to view another meme.</p>
 
     <div id="imgdiv">
-      <img id="memeImage" src="" alt="" />
+      <img id="memeImage" src="" alt="" onclick="get_random_meme()" />
+    </div>
+
+    <div class="settings">
+      <button class="close-settings btn btn-danger">&times;</button>
+      <h2>Settings</h2>
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="margin-bottom: 10px; margin-top: 10px"
+      >
+        <div class="form-check form-switch d-flex align-items-center">
+          <input
+            class="form-check-input me-2"
+            type="checkbox"
+            id="darkModeSwitch"
+          />
+          <label class="form-check-label mb-0" for="darkModeSwitch"
+            >Dark Mode</label
+          >
+        </div>
+      </div>
     </div>
 
     <script
@@ -90,5 +83,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="settings.js"></script>
+    <script src="darkmode.js"></script>
   </body>
 </html>
