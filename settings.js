@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSettingsTheme() {
     const currentTheme = body.getAttribute("data-bs-theme");
     settingsPanel.style.backgroundColor =
-      currentTheme === "dark" ? "#222" : "#f8f9fa";
+      currentTheme === "dark" ? "#212529ff" : "white";
     settingsPanel.style.color = currentTheme === "dark" ? "white" : "black";
   }
 
