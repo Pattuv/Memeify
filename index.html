@@ -51,10 +51,11 @@
       </div>
     </nav>
 
-    <p style="margin-top: 25px">Tap anywhere to view another meme.</p>
-
-    <div id="imgdiv">
-      <img id="memeImage" src="" alt="" onclick="get_random_meme()" />
+    <div class="clicker" onclick="get_random_meme()">
+      <p style="margin-top: 25px">Tap anywhere to view another meme.</p>
+      <div id="imgdiv">
+        <img id="memeImage" src="" alt="" />
+      </div>
     </div>
 
     <div class="settings">
@@ -76,14 +77,14 @@
         </div>
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+
     <script src="settings.js"></script>
     <script src="darkmode.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -23,10 +23,14 @@ body {
   color: #008000 !important;
 }
 
+.clicker {
+  height: 100%;
+  cursor: pointer;
+}
+
 #memeImage {
   max-width: 100%;
   height: auto;
-  cursor: pointer;
   border-radius: 10px;
 }
 
