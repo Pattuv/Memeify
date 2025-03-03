@@ -1,6 +1,3 @@
-const clickSound = new Audio("click.mp3");
-clickSound.preload = "auto";
-
 const darkModeSwitch = document.getElementById("darkModeSwitch");
 const body = document.body;
 
@@ -14,11 +11,6 @@ darkModeSwitch.addEventListener("change", () => {
   const theme = darkModeSwitch.checked ? "dark" : "light";
   body.setAttribute("data-bs-theme", theme);
   localStorage.setItem("theme", theme);
-  const clickSound = new Audio("click.mp3");
-  clickSound.play().catch(() => {
-    console.warn("Audio file failed to play. Using Web Audio API instead.");
-    playTypingClick();
-  });
 });
 
 function playTypingClick() {
