@@ -12,12 +12,6 @@ async function get_random_meme() {
   let memes = await init_memes();
   let img = document.getElementById("memeImage");
 
-  const clickSound = new Audio("click_soft.mp3");
-  clickSound.play().catch(() => {
-    console.warn("Audio file failed to play. Using Web Audio API instead.");
-    playTypingClick();
-  });
-
   if (memes.length > 0) {
     let index = Math.floor(Math.random() * memes.length);
     random_meme = memes[index];
