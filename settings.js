@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Open the settings panel
   settingsButton.addEventListener("click", function () {
     settingsPanel.classList.add("open");
-    const clickSound = new Audio("click.mp3");
+    const clickSound = new Audio("click_soft.mp3");
     clickSound.play().catch(() => {
       console.warn("Audio file failed to play. Using Web Audio API instead.");
       playTypingClick();
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close the settings panel
   closeButton.addEventListener("click", function () {
     settingsPanel.classList.remove("open");
-    const clickSound = new Audio("click.mp3");
+    const clickSound = new Audio("click_soft.mp3");
     clickSound.play().catch(() => {
       console.warn("Audio file failed to play. Using Web Audio API instead.");
       playTypingClick();
