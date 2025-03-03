@@ -12,7 +12,7 @@ async function get_random_meme() {
   let memes = await init_memes();
   let img = document.getElementById("memeImage");
 
-  const clickSound = new Audio("sounds/apple-typing.mp3");
+  const clickSound = new Audio("click.mp3");
   clickSound.play().catch(() => {
     console.warn("Audio file failed to play. Using Web Audio API instead.");
     playTypingClick();

@@ -11,7 +11,7 @@ darkModeSwitch.addEventListener("change", () => {
   const theme = darkModeSwitch.checked ? "dark" : "light";
   body.setAttribute("data-bs-theme", theme);
   localStorage.setItem("theme", theme);
-  const clickSound = new Audio("sounds/apple-typing.mp3");
+  const clickSound = new Audio("click.mp3");
   clickSound.play().catch(() => {
     console.warn("Audio file failed to play. Using Web Audio API instead.");
     playTypingClick();
