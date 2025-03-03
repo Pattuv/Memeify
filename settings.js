@@ -1,3 +1,6 @@
+const clickSound = new Audio("click.mp3");
+clickSound.preload = "auto";
+
 document.addEventListener("DOMContentLoaded", function () {
   const settingsPanel = document.querySelector(".settings");
   const settingsButton = document.getElementById("open-settings");

@@ -1,3 +1,6 @@
+const clickSound = new Audio("click.mp3");
+clickSound.preload = "auto";
+
 const darkModeSwitch = document.getElementById("darkModeSwitch");
 const body = document.body;
 

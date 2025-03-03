@@ -1,3 +1,6 @@
+const clickSound = new Audio("click.mp3");
+clickSound.preload = "auto";
+
 async function init_memes() {
   memes_json = await fetch("memes.json");
   memes = await memes_json.json();
