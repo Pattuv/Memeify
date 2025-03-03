@@ -19,11 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Open the settings panel
   settingsButton.addEventListener("click", function () {
     settingsPanel.classList.add("open");
+    const clickSound = new Audio("click.mp3");
+    clickSound.play().catch(() => {
+      console.warn("Audio file failed to play. Using Web Audio API instead.");
+      playTypingClick();
+    });
   });
 
   // Close the settings panel
   closeButton.addEventListener("click", function () {
     settingsPanel.classList.remove("open");
+    const clickSound = new Audio("click.mp3");
+    clickSound.play().catch(() => {
+      console.warn("Audio file failed to play. Using Web Audio API instead.");
+      playTypingClick();
+    });
   });
 
   // Close the settings panel when clicking outside the panel or button
@@ -44,3 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSettingsTheme();
   });
 });
+
+function playTypingClick() {
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.setValueAtTime(450, audioCtx.currentTime);
+  oscillator.frequency.linearRampToValueAtTime(440, audioCtx.currentTime + 0.1);
+
+  gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+  gainNode.gain.linearRampToValueAtTime(0.1, audioCtx.currentTime + 0.1);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.start();
+  oscillator.stop(audioCtx.currentTime + 0.1);
+}
