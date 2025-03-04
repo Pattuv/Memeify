@@ -20,7 +20,7 @@ body {
 }
 
 #green {
-  color: #008000 !important;
+  color: #ff5757 !important;
 }
 
 .clicker {
@@ -32,7 +32,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: solid 1px #008000;
+  border: solid 1px #ff5757;
 }
 
 button {
@@ -88,11 +88,11 @@ nav {
 }
 
 .form-check-input:checked {
-  background-color: #008000 !important;
-  border-color: #008000 !important;
+  background-color: #ff5757 !important;
+  border-color: #ff5757 !important;
 }
 
 .form-check-input:focus {
-  box-shadow: 0 0 5px 3px #008000; /* Green glow */
-  border-color: #008000;
+  box-shadow: 0 0 5px 3px #ff5757; /* Green glow */
+  border-color: #ff5757;
 }
